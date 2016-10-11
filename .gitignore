@@ -5,3 +5,6 @@
 /public
 .deploy_git
 db.json
+
+# Webstorm / PHPStorm conf folder
+.idea
