@@ -1,0 +1,33 @@
+<div class="col-sm-4">
+  <article class="card">
+    <div class="image-container">
+      <% var placeholder_image = item.placeholder_image || theme.post_placeholder_image %>
+      <img src=" <%- placeholder_image %>" alt="">
+    </div>
+
+    <section class="card-content">
+      <header>
+        <h2>
+          <a href="<%- config.root %><%- item.path %>"> <%= item.title %> </a>
+        </h2>
+        <p class="info"> 
+          <% if(item.meeting_date && new Date(item.meeting_date)) {%>
+          <%= new Date(item.meeting_date).toDateString() %> 
+          <% } %>
+        </p>
+      </header>
+
+      <% var excerpt = item.summary || item.excerpt
+         if(excerpt) { %>
+        <p>
+          <%- excerpt %> 
+          <a class="read-more" href=" <%- config.root%><%- item.path %> ">
+            <%= theme.excerpt_link %>
+          </a>
+        </p>
+      <% } else {%>
+        <p>Do you know something about this summary? Please add it!</p>
+      <% } %>
+    </section>
+  </article>
+</div>

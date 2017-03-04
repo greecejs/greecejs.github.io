@@ -8,3 +8,5 @@ tags:
 ---
 
 The time for the 9th GreeceJS Meetup has come and there is an open call for speakers at https://groups.google.com/forum/#!forum/greecejs (greecejs@googlegroups.com).
+
+<!-- more -->

@@ -4,6 +4,8 @@ id: 186
 categories:
   - Uncategorized
 date: 2016-02-03 10:12:07
+meeting_date: 2016-02-17
+place: InnovAthens
 tags:
 ---
 
@@ -11,6 +13,7 @@ Hey all,
 
 We are hosting our 12th GreeceJS meetup on Wednesday, Feb 17 at [InnovAthens](http://www.innovathens.gr/ "Innovathens"). RSVP at [meetup.com](http://www.meetup.com/GreeceJS/events/228574941/) and join us for some great talks and lots of networking over pizza and beer!
 
+<!-- more -->
 ## Agenda
 
 **<span style="color:#339966;">18:00 - 18:45</span>**

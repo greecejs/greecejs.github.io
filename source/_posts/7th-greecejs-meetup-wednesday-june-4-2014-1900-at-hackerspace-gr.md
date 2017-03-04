@@ -4,6 +4,7 @@ id: 117
 categories:
   - Uncategorized
 date: 2014-05-30 16:18:43
+meeting_date: 2014-06-04 19:00
 tags:
 ---
 

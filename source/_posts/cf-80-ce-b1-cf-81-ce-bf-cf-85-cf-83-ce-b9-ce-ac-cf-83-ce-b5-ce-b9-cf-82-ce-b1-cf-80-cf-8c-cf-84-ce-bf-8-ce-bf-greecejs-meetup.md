@@ -5,6 +5,7 @@ categories:
   - Uncategorized
 date: 2015-04-10 14:16:55
 tags:
+summary: Grab now the 8th GreeceJS Meetup presentations.
 ---
 
 **[Introduction to Backbone.js](https://docs.google.com/presentation/d/1309xH6-B0Gd0e-Q4gsBuHpJJvBYwrR5DTrCGRtW5jUU/pub?start=false&amp;loop=false&amp;delayms=60000&amp;slide=id.p)**

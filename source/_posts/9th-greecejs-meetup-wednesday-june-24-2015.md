@@ -4,11 +4,13 @@ id: 153
 categories:
   - Uncategorized
 date: 2015-06-04 08:17:39
+meeting_date: 2015-06-24 18:00:00
 tags:
 ---
 
 The clock is ticking and the time for the 9th meetup is coming! Mark your calendars: June 24th at our new home, [Innovathens](http://www.innovathens.gr/ "Innovathens"), for some great talks and lots of networking over pizza and beer graciously provided by our sponsor for this event, [Piraeus Direct Services](http://www.pds.gr/ "PDS"). RSVP at the meetup.com [event page](http://www.meetup.com/GreeceJS/events/222886924/)!
 
+<!-- more -->
 ## Agenda
 
 **<span style="color:#339966;">18:00 - 18:45</span>**

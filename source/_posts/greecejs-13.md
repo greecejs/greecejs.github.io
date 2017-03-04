@@ -4,12 +4,16 @@ id: 191
 categories:
   - Uncategorized
 date: 2016-03-22 10:44:43
+meeting_date: 2016-04-14 18:00:00
+place: InnovAthens
 tags:
 ---
 
 Hola good people,
 
 We are celebrating 5 years of GreeceJS meetups and have prepared an exciting event with an all-star speaker ensemble on **Thursday April 14, 2016** at [InnovAthens](http://www.innovathens.gr/). This will be the first time we have a foreign speaker participating, namely Benjamin Cabé from the [Eclipse Foundation](https://eclipse.org/), who will be speaking about IoT and JavaScript.
+
+<!-- more -->
 
 Have a look at the event's agenda below.
 

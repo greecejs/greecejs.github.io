@@ -4,10 +4,15 @@ id: 124
 categories:
   - Uncategorized
 date: 2015-03-18 20:58:48
+meeting_date: 2015-04-8 18:00:00
+placeholder_image: https://greecejs.files.wordpress.com/2015/03/istock_000014591296large-8th-greecejs-meetup.jpg?w=660
+
 tags:
 ---
 
 It's a pleasure to announce the 8th GreeceJS Meetup, that will be taking place on **Wed April 8, 2015**.
+
+<!-- more -->
 
 ## ![iStock_000014591296Large + 8th GreeceJS Meetup](https://greecejs.files.wordpress.com/2015/03/istock_000014591296large-8th-greecejs-meetup.jpg?w=660)
 

@@ -4,12 +4,17 @@ id: 226
 categories:
   - Uncategorized
 date: 2016-06-02 09:09:39
+meeting_date: 2016-06-15 18:00:00
+place: InnovAthens
+placeholder_image: https://cloud.githubusercontent.com/assets/4293389/23581635/1fb4b9fe-0120-11e7-8d0c-a6410d8b3724.jpeg
 tags:
 ---
 
 Hola good people, 
 
 We are proud to announce meetup #14 (June 15, 2016, 18:00 - 21:00, InnovAthens), which is bound to set a new standard for GreeceJS! We are bringing Andy Davies, Web Performance Expert, author of "Using WebPageTest" (O'reilly, 2015), from Gloucestershire UK, to speak about HTTP/2\. We also have an excellent talk on the trending topic of GraphQL from our community talents Max and Stelio.
+
+<!-- more -->
 
 By the way, we made sure to leave plenty of time for questions. Check out the event's agenta:
 

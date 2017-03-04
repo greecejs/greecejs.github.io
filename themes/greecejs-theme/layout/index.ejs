@@ -1,0 +1,60 @@
+<header class="row i-cant-name-this-shit">
+  <div class="col-sm-8">
+
+    <!-- should this be an article ? -->
+    <section class="site-info">
+      <div class="caption">
+        <h1> <%= config.title %> </h1>
+        <h3> <%= config.subtitle %> </h3>
+      </div>
+      <div class="logo">
+        <img src="<%= theme.logo %>" alt="">
+      </div>
+    </section>
+  </div>
+  <aside class="col-sm-4">
+    <h4> Upcoming Event </h4>
+    <h3>
+      <a href="#">18th GreeceJS Meetup</a>
+    </h2>
+
+    <p>TBD: (sometime in April) </br> 2017, 18:00 - 21:00</p>
+    <p>@ Innovathens (Technopolis, Gazi) </p>
+  </aside>
+</header>
+
+
+<section class="slack-invite">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <header>
+          <h3>Join us on slack</h3>
+          <p>Participate in great discussions on our team's Slack.</p>
+        </header>
+      </div>
+      <div class="col-sm-4 text-right">
+        <form action="#">
+          <input type="text" name="slack-email" placeholder="E-mail">
+          <button type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="blog-posts">
+  <header>
+    <h3>Past GreeceJS Meetups</h3>
+    <p>Have a look at our previous Meetups</p>
+  </header>
+  
+  <div class="container">
+  <div class="row">
+    <% page.posts.each(function(item) { %>
+      <%- partial("_partial/article-excerpt", { item: item }) %>
+    <% }) %>
+  </div>
+  </div>
+</section>

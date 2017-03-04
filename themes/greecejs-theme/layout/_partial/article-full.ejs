@@ -1,0 +1,31 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+
+    <header style="padding: 1em 0;">
+      <a href="<%- config.root %>">< | Back to Homepage</a>
+    </header>
+
+      <article class="card">
+  
+          <section class="card-content">
+            <header>
+              <h2>
+                <a href="<%- config.root %><%- item.path %>"> <%= item.title %> </a>
+              </h2>
+              <p class="info"> 
+                <% if(item.meeting_date && new Date(item.meeting_date)) {%>
+                <%= new Date(item.meeting_date).toDateString() %> 
+                <% } %>
+              </p>
+            </header>
+
+          <%- item.content %>
+          </section>
+      </article>
+
+    </div>
+  </div>
+</div>

@@ -4,11 +4,14 @@ id: 171
 categories:
   - Uncategorized
 date: 2015-10-12 08:34:07
+meeting_date: 2015-10-19
+place: InnovAthens
 tags:
 ---
 
 Our 10th meetup is imminent! Mark your calendars: Oct 19 at our new home, [Innovathens](http://www.innovathens.gr/ "Innovathens"), for some great talks and lots of networking over pizza and beer graciously provided by our sponsor for this event, [Resin.io](https://resin.io/). RSVP at the meetup.com [event page](http://www.meetup.com/GreeceJS/events/225971016/)!
 
+<!-- more -->
 ## Agenda
 
 **<span style="color:#339966;">18:00 - 18:45</span>**

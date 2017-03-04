@@ -4,11 +4,13 @@ id: 178
 categories:
   - Uncategorized
 date: 2015-11-30 09:37:13
+meeting_date: 2015-12-15 18:00:00
 tags:
 ---
 
 Our 11th meetup is imminent! Mark your calendars: Dec 15 at [Innovathens](http://www.innovathens.gr/ "Innovathens"), for some great talks and lots of networking over pizza and beer graciously provided by our sponsor for this event, [SourceLair](https://www.sourcelair.com/home). RSVP at the meetup.com event [event page](http://www.meetup.com/GreeceJS/events/227107177/)!
 
+<!-- more -->
 ## Agenda
 
 **<span style="color:#339966;">18:00 - 18:45</span>**
