@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #ecf0f1;
+  background-color: #f9f9f9;
   font-size: 16px;
   font-family: "Montserrat", "Open Sans", Helvetica;
 }
@@ -68,11 +68,19 @@ a:active {
   text-align: left;
 }
 
+.hidden {
+  display: none;
+}
+
 /*004c98*/
-.i-cant-name-this-shit aside {
+
+.banner {
+  background-color: white;
+}
+.banner aside {
   background-color: #3498db;
   color: #ecf0f1;
-  padding: 3em 2em 7em 2em;
+  padding: 6em 2em 13em 2em;
 }
 
 .caption h1 {
@@ -90,6 +98,7 @@ a:active {
   height:100%;
   justify-content: center;
   padding: 8em 0;
+  background-color:white;
 }
 
 .site-info .logo {
@@ -100,18 +109,18 @@ a:active {
   height: 120px;
 }
 
-.i-cant-name-this-shit aside h4 {
+.banner aside h4 {
   margin-bottom: 2em;
 }
 
-.i-cant-name-this-shit aside h3 a {
+.banner aside h3 a {
   color: #fff;
 }
 
 /*i messed up the css and now i have to clean it up */
-.i-cant-name-this-shit aside h3 a:hover,
-.i-cant-name-this-shit aside h3 a:active,
-.i-cant-name-this-shit aside h3 a:focus {
+.banner aside h3 a:hover,
+.banner aside h3 a:active,
+.banner aside h3 a:focus {
   color: #1980b9;
 }
 

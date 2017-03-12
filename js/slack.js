@@ -19,6 +19,8 @@ var Slack = (function() {
     INVALID_EMAIL: 3
   }
 
+  var form
+
   function Slack(options) {
     this.o = options || {}
     this.o.debug = this.o.debug || true
@@ -41,8 +43,11 @@ var Slack = (function() {
       return false 
     }
 
+    form = elements.form
     this.form = elements.form
     this.emailInput = elements.emailInput
+    this.submitButton = elements.submitButton
+    this.alert = this.form.querySelector(".slack-alert")
 
     _attachEventListeners.call(this)
   }
@@ -50,34 +55,74 @@ var Slack = (function() {
   function _handleErrors(err) {
 
     // if(o.debug === false)
-
     if(err === errorCodes.INVALID_FORM_ELEMENT) {
       console.error("Slack.js: Slack.prototype.init: a form element needs to be provided.")
     }
-    if(err === errorCodes.INVALID_INPUT_ELEMENT) {
+    else if(err === errorCodes.INVALID_INPUT_ELEMENT) {
       console.error("Slack.js: Slack.prototype.init: a text input element needs to be provided.")
     }
-    if(err === errorCodes.INVALID_EMAIL) {
+    else if(err === errorCodes.INVALID_EMAIL) {
       console.error("Slack.js: Email entered is invalid")
     }
-    if(err === errorCodes.MISSING_ELEMENTS) {
+    else if(err === errorCodes.MISSING_ELEMENTS) {
       console.error("Slack.js: new Slack().init needs to be provided with the form and the input element.")
+    }
+    else {
+      console.error("Slack.js: ", err)
     }
 
   }
+
 
   function _handleFormSubmit(evt) {
     evt.preventDefault()
     evt.stopPropagation()
+    if(this.alert.textContent.length > 0 )
+      this.alert.textContent = ""
     _subscribe.call(this, this.emailInput.value)
   }
 
   function _subscribe(email) {
+    var that = this
+    _toggleFormSubmit.call(that)
     _sendRequestToSlackAPI(email, function(err, response){
-      if(err) 
-        _handleErrors(err)
+
+      _toggleFormSubmit.call(that)
+      if(err && err === errorCodes.INVALID_EMAIL) return _showAlert(that.alert, "Invalid email", true)
+      else if (err) return _handleErrors(err)
+      
       console.log("response from _subscribe", response)
+      _handleSlackResponse.call(that, err, response)
     })
+  }
+
+  function _handleSlackResponse(err, response) {
+    if(err) 
+      return _handleErrors(err)
+
+    if(!response.ok) {
+      switch (response.error) {
+        case "already_invited":
+          _showAlert(this.alert, "Email has already been invited.", true)
+          break;
+        case "already_in_team":
+          _showAlert(this.alert, "Email is already a member of the team.", true)
+          break;
+      }
+
+      return
+    }
+
+    _showAlert(this.alert, "Your invitation has been sent!")
+  }
+
+
+  function _toggleFormSubmit() {
+    this.submitButton.classList.toggle("loading")
+    if(this.submitButton.disabled)
+      this.submitButton.disabled = true
+    else
+      this.submitButton.disabled = false
   }
 
   function _attachEventListeners() {
@@ -85,7 +130,16 @@ var Slack = (function() {
     // this.submitButton.addEventListener("click", this.handleSubmit.bind(this))
   }
 
+  function _showAlert(element, message, isError) {
+    element.textContent = message
+    if(isError) 
+      element.classList.add("error")
+    else {
+      element.classList.add("success")
+      element.parentNode.classList.add("invite-sent")
+    }
 
+  }
   function _isElement(o){
     return (
       typeof HTMLElement === "object" ? o instanceof HTMLElement :
@@ -95,9 +149,9 @@ var Slack = (function() {
 
   function _sendRequestToSlackAPI(email, cb) {
 
-    if(!_isValidEmail(email)) {
+    if(!_isValidEmail(email))
       return cb(errorCodes.INVALID_EMAIL)
-    }
+
     var request = new XMLHttpRequest()
 
     var url = Slack.subscribe_url + "&email=" + email
